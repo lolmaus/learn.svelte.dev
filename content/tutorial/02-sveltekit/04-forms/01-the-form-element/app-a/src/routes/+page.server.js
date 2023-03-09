@@ -8,6 +8,6 @@ export function load({ cookies }) {
 	}
 
 	return {
-		todos: db.getTodos(id) ?? []
+		todos: id ? db.getTodos(id) : []
 	};
 }
